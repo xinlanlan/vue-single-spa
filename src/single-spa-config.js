@@ -56,17 +56,4 @@ singleSpa.registerApplication(
     location => location.pathname.startsWith('/react')
 );
 
-singleSpa.registerApplication(
-    'angular-app',
-    async () => {
-        await runScript('http://localhost:3002/inline.bundle.js');
-        await runScript('http://localhost:3002/polyfills.bundle.js');
-        await runScript('http://localhost:3002/styles.bundle.js');
-        await runScript('http://localhost:3002/vendor.bundle.js');
-        await runScript('http://localhost:3002/main.bundle.js');
-        return window.angularApp;
-    },
-    location => location.pathname.startsWith('/angular')
-);
-
 singleSpa.start(); // 启动

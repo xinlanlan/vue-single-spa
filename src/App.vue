@@ -25,12 +25,6 @@
             <span>React</span>
           </router-link>
         </a-menu-item>
-        <a-menu-item key="3">
-          <router-link to="angular">
-            <a-icon type="video-camera" />
-            <span>Angular</span>
-          </router-link>
-        </a-menu-item>
       </a-menu>
     </a-layout-sider>
     <a-layout>
@@ -47,7 +41,6 @@
           <div id="single-vue" class="single-spa-vue">
             <div id="vue"></div>
           </div>
-          <div id="angular-app"></div>
           <router-view :key="$route.path" />
         </div>
       </a-layout-content>
@@ -88,5 +81,8 @@
     height: 32px;
     background: rgba(255, 255, 255, 0.2);
     margin: 16px;
+  }
+  .ant-layout-has-sider {
+    height: 100%;
   }
 </style>
